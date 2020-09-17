@@ -16,5 +16,6 @@ int main(void)
 		putchar(lower);
 	for (upper = 'A'; upper <= 'Z'; upper++)
 		putchar(upper);
+	printf("\n");
 	return (0);
 }
