@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* main - prints the alphabet in lowercase, followed by a new line */
+
+/* 
+ * main - prints the alphabet in lowercase, followed by a new line 
+ * Description - uses modulus (%) to find the last digit
+ * Return: returns 0
+ */
 int main(void)
 {
 	int n;
