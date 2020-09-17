@@ -9,25 +9,25 @@
  */
 int main(void)
 {
-	for (int a = 0; a < 10; a++)
+	int firstNum;
+	int secondNum;
+
+	for (firstNum = 0; firstNum < 99; firstNum++)
 	{
-		for (int b = a; b < 10; b++)
+		for (secondNum = firstNum + 2; secondNum < 100; secondNum++)
 		{
-			putchar(a % 10 + '0');
-			putchar(b % 10 + '0');
+			/*
+			 * Printing numbers with putchar
+			 */
+			putchar(firstNum / 10 + '0');
+			putchar(firstNum % 10 + '0');
 			putchar(' ');
-			for (int c = 0; c < 10; c++)
-			{
-				for (int d = 0; d < 10; d++)
-				{
-					putchar(c % 10 + '0');
-					putchar(d % 10 + '0');
-					if (c == 99 && d == 99)
-						break;
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar(secondNum / 10 + '0');
+			putchar(secondNum % 10 + '0');
+			if (firstNum == 8 && secondNum == 9)
+				break;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
