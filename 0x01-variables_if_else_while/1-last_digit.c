@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/* main - prints the alphabet in lowercase, followed by a new line */
 int main(void)
 {
 	int n;
@@ -14,10 +12,10 @@ int main(void)
 
 	printf("The last digit of %d is %d ", n, last_digit);
 	if (n > 5)
-		printf("and is greater than 5");
+		printf("and is greater than 5\n");
 	if (n == 0)
-		printf("and is 0");
+		printf("and is 0\n");
 	if (n < 6)
-		printf("and is less than 6 and not 0");
+		printf("and is less than 6 and not 0\n");
 	return (0);
 }
