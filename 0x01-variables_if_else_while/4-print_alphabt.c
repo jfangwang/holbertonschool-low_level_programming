@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * Main: Prints the alphabet in lowercase followed by a new line
+ * main - Prints the alphabet in lowercase followed by a new line
  *
  * Description: Uses a for loop printing each letter with putchar
- * 
- * Return: Returns 0
+ * Return: returns 0
  */
 int main(void)
 {
@@ -16,6 +15,6 @@ int main(void)
 		if (c != 'q' && c != 'e')
 			putchar(c);
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
