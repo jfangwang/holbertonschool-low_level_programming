@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - tells you if random number is negative or positive
+ * main - outputs a-z
  *
- * Description: Uses if else to print if # if neg/pos/zero
- * Return: returns zero
+ * Description: Uses a for loop and putchar to output a-z and newline
+ * Return: returns 0
  */
 int main(void)
 {
@@ -12,5 +12,6 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 		putchar(c);
+	putchar('\n')
 	return (0);
 }
