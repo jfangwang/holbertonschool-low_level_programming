@@ -8,7 +8,6 @@
  * Description: Uses if else to print if # if neg/pos/zero
  * Return: returns zero
  */
-
 int main(void)
 {
 	int n;
