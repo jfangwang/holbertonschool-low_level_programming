@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * main - Prints all single digit numbers of base 10,
+ * starting from 0 followed by a new line
+ *
+ * Description: Uses a for loop to putchar all numbers
+ * Return: returns 0
+ */
 int main(void)
 {
 	int a, b, c;
@@ -14,7 +21,8 @@ int main(void)
 				putchar(b % 10 + '0');
 				putchar(c % 10 + '0');
 				if (a == 7 && b == 8 && c == 9)
-					break;
+					continue;
+
 				putchar(',');
 				putchar(' ');
 			}
