@@ -9,9 +9,12 @@
  */
 int main(void)
 {
-	for (int a = 0; a < 10; a++)
-		putchar(a % 10 + '0');
-	for (char c = 'a'; c < 'g'; c++)
+	int a;
+	int c;
+
+	for (a = 0; a < 10; a++)
+		putchar(a);
+	for (c = 'a'; c < 'g'; c++)
 		putchar(c);
 	putchar('\n');
 	return (0);
