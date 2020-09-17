@@ -14,7 +14,7 @@ int main(void)
 
 	for (firstNum = 0; firstNum < 99; firstNum++)
 	{
-		for (secondNum = firstNum + 2; secondNum < 100; secondNum++)
+		for (secondNum = firstNum + 1; secondNum < 100; secondNum++)
 		{
 			/*
 			 * Printing numbers with putchar
