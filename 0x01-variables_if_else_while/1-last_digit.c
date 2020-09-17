@@ -2,13 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
- * main - Gets random number and prints the last digit
+/**
+ * main - tells you if random number is negative or positive
  *
- * Description - uses rand for random number,
- * uses modulus (%) to find the last digit
- * Return: returns 0
+ * Description: Uses if else to print if # if neg/pos/zero
+ * Return: returns zero
  */
+
 int main(void)
 {
 	int n;
@@ -20,9 +20,9 @@ int main(void)
 	printf("Last digit of %d is %d ", n, last_digit);
 	if (n > 5)
 		printf("and is greater than 5\n");
-	else if (n == 0)
-		printf("and is 0\n");
-	else
+	else if (n != 0 && n < 6)
 		printf("and is less than 6 and not 0\n");
+	else
+		printf("and is 0\n");
 	return (0);
 }
