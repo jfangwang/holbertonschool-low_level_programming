@@ -4,7 +4,7 @@
  * main - Prints all single digit numbers of base 10,
  * starting from 0 followed by a new line
  *
- * Description: Uses a for loop and printf
+ * Description: Uses a for loop to putchar all numbers
  * Return: returns 0
  */
 int main(void)
