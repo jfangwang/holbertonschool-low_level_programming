@@ -19,12 +19,12 @@ int main(void)
 			/*
 			 * Printing numbers with putchar
 			 */
-			putchar(firstNum / 10 + '0');
-			putchar(firstNum % 10 + '0');
+			putchar((firstNum / 10) + '0');
+			putchar((firstNum % 10) + '0');
 			putchar(' ');
 			putchar(secondNum / 10 + '0');
 			putchar(secondNum % 10 + '0');
-			if (firstNum == 8 && secondNum == 9)
+			if (firstNum == 98 && secondNum == 99)
 				break;
 			putchar(',');
 			putchar(' ');
