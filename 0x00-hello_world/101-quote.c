@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/*
- * main - Prints "and that piece of art is useful - Dora Korpar, 2015-10-19"
- * 
- * Description: Uses write to print the statement
+/**
+ * main - tells you if random number is negative or positive
  *
- * Return: returns 1
+ * Description: Uses if else to print if # if neg/pos/zero
+ * Return: returns zero
  */
 int main(void)
 {
