@@ -1,2 +1,2 @@
 **Welcome to project 0x00!"
-Testing on mac
+This directory is all about C basics and get comfortable with GCC.
