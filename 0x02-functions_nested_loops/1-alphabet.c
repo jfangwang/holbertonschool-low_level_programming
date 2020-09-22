@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -9,7 +9,8 @@
 int main(void)
 {
 	char a;
-	for(a = 'a'; a <= 'z'; a++)
+
+	for (a = 'a'; a <= 'z'; a++)
 	{
 		putchar(a);
 	}
