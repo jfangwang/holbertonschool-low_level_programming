@@ -1,19 +1,21 @@
-#include <stdio.h>
-#include <string.h>
+#include "holberton.h"
 
 /**
- * main - Prints "Holberton" with new line
+ * main - prints "Holberton" then a  new line.
  *
- * Return: 0
+ * Return: 0.
+ */
 int main(void)
 {
-	int a;
-	char string[32] = "Holberton";
-	while (string[a] != '\0')
-	{
-		putchar(string[a]);
-		a++;
-	}
-	putchar('\n');
-	return (0);
+	_putchar('H');	
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');	
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+
+	return(0);
 }
