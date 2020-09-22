@@ -1,11 +1,12 @@
 #include "../holberton.h"
+
 /**
- * main - Checks to run function
+ * main - check the code for Holberton School students.
  *
- * Return: 0
+ * Return: Always 0.
  */
 int main(void)
 {
-	print_alphabet_x10();
-	return (0);
+    print_alphabet_x10();
+    return (0);
 }
