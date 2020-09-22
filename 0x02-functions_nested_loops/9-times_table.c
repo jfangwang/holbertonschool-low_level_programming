@@ -27,10 +27,10 @@ void times_table(void)
 				_putchar(num / 10 + '0');
 				_putchar(num % 10 + '0');
 			}
-			if (pCol == 9)
-				break;
-			else
+			if (pCol != 9)
 				_putchar(',');
+			else
+				break;
 		}
 		_putchar('\n');
 	}
