@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+ * main - Prints "Holberton" with new line
+ *
+ * Return: 0
 int main(void)
 {
 	int a;
