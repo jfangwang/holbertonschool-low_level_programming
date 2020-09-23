@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-	int sum = 0, f = 1, s = 2, t = 0, n = 0;
+	long sum = 0, f = 1, s = 2, t = 0, n = 0;
 
 	while (n < 49)
 	{
-		printf("%d, ", f);
+		printf("%ld, ", f);
 		sum += f + s;
 		t = f + s;
 		f = s;
 		s = t;
 		n++;
 	}
-	printf("%d\n", f);
+	printf("%ld\n", f);
 }
