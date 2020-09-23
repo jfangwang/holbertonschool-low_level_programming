@@ -1,7 +1,9 @@
 #include <stdio.h>
 
-/*
- * main - Lists Natural Numbers multiple of 3 or 5 under 1024
+/**
+ * main - prints the sum of all Natural Numbers that are
+ * multiples of 3 or 5 below 1024.
+ * Description: Prints the answer
  * Return: 0
  */
 int main(void)
@@ -10,8 +12,10 @@ int main(void)
 
 	for (num = 0; num < 1024; num++)
 	{
-		if (num % 3 == 0 || num % 5 == 0)
+		if ((num % 3 == 0) || (num % 5 == 0))
 			total += num;
 	}
 	printf("%d\n", total);
+	return (0);
 }
+
