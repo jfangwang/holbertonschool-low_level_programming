@@ -9,7 +9,7 @@ int main(void)
 {
 	int sum = 0, f = 1, s = 2, t = 0, n = 0;
 
-	while (n < 50)
+	while (n < 9)
 	{
 		//1,2,3,5
 		printf("%d, ", f);
