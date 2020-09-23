@@ -19,4 +19,5 @@ int main(void)
 		s = t;
 		n++;
 	}
+	printf("%d\n", f);
 }
