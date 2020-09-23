@@ -19,21 +19,21 @@ void print_times_table(int n)
 		for (col = 1; col < n + 1; col++)
 		{
 			num = col * row;
-			if(num < 1000 && num >= 100)
+			if (num < 1000 && num >= 100)
 			{
 				_putchar(' ');
 				_putchar(num / 100 + '0');
 				_putchar(num / 10 + '0');
 				_putchar(num % 10 + '0');
 			}
-			if(num < 100 num >= 10)
+			if (num < 100 num >= 10)
 			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(num / 10 + '0');
 				_putchar(num % 10 + '0');
 			}
-			if(num < 10)
+			if (num < 10)
 			{
 				_putchar(' ');
 				_putchar(' ');
@@ -44,3 +44,6 @@ void print_times_table(int n)
 				_putchar(',');
 			else
 				break;
+		}
+	}
+}
