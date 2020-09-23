@@ -11,7 +11,6 @@ int main(void)
 
 	while (n < 9)
 	{
-		//1,2,3,5
 		printf("%d, ", f);
 		sum += f + s;
 		t = f + s;
