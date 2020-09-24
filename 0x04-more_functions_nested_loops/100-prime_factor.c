@@ -6,8 +6,8 @@
 int main(void)
 {
 	long n = 612852475143;
-	int a, b, fact;
-	int pnum = 1;
+	long a, b, fact;
+	long pnum = 1;
 	/*
 	 * List prime nums
 	 */
@@ -25,6 +25,6 @@ int main(void)
 				pnum = a;
 		}
 	}
-	printf("%d\n", pnum);
+	printf("%ld\n", pnum);
 	return (0);
 }
