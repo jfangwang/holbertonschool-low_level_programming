@@ -5,14 +5,16 @@
  */
 int main(void)
 {
-	long n = 612852475143, pnum, fact;
+	long n = 612852475143;
+	int a, b, fact;
+	int pnum = 1;
 	/*
 	 * List prime nums
 	 */
-	for (int a = 2; a < n; a++)
+	for (a = 2; a < n; a++)
 	{
 		fact = 0;
-		for (int b = 2; b < a; b++)
+		for (b = 2; b < a; b++)
 		{
 			if (a % b == 0)
 				fact += 1;
@@ -23,6 +25,6 @@ int main(void)
 				pnum = a;
 		}
 	}
-	printf("%ld\n", pnum);
+	printf("%d\n", pnum);
 	return (0);
 }
