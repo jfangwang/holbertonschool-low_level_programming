@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	long n = 612852475143;
+	long n = 6886;
 	int a, b, fact;
 	int pnum = 1;
 	/*
