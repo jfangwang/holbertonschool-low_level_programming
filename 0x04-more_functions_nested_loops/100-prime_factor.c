@@ -7,7 +7,6 @@ int main(void)
 {
 	long n = 612852475143;
 	long a, b, fact;
-	long pnum = 1;
 	/*
 	 * List prime nums
 	 */
@@ -22,9 +21,9 @@ int main(void)
 		if (fact == 0)
 		{
 			if (n % a == 0)
-				pnum = a;
+				n /= a;
 		}
 	}
-	printf("%ld\n", pnum);
+	printf("%ld\n", n);
 	return (0);
 }
