@@ -9,14 +9,13 @@ void print_number(int n)
 	int rev = 0;
 	int rem = 0;
 
-	if (n == 0)
-		_putchar('0');
 	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
 	}
-
+	if (n == 0)
+		_putchar(n + '0');
 	while (n > 0)
 	{
 		rem = n % 10;
