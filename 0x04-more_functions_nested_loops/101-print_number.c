@@ -15,7 +15,7 @@ void print_number(int n)
 		_putchar('-');
 	}
 	if (n > 0)
-	{	
+	{
 		while (n > 0)
 		{
 			rem = n % 10;

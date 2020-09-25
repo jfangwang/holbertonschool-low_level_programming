@@ -1,1 +1,1 @@
-**Welcome to more functions!**
+**Welcome to more functions**
