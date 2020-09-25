@@ -16,7 +16,7 @@ void print_number(int n)
 		n *= -1;
 		_putchar('-');
 	}
-	if(n == 0)
+	if (n == 0)
 	{
 		_putchar(n + '0');
 		return;
@@ -24,7 +24,7 @@ void print_number(int n)
 		while (n > 0)
 		{
 			rem = n % 10;
-			if(plc >= 9)
+			if (plc >= 9)
 				overflow = overflow * 10 + rem;
 			else
 				rev = rev * 10 + rem;
