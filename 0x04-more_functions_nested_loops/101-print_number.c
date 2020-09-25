@@ -6,8 +6,8 @@
  */
 void print_number(int n)
 {
-	long rev = 0;
-	long rem = 0;
+	int rev = 0;
+	int rem = 0;
 
 	if (n < 0)
 	{
