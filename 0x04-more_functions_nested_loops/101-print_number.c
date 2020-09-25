@@ -6,28 +6,17 @@
  */
 void print_number(int n)
 {
-	int rev = 0;
-	int rem = 0;
-
 	if (n < 0)
 	{
-		n *= -1;
 		_putchar('-');
+		n *= -1;
 	}
+	/*
+	 * Recursion
+	 */
 	if (n > 0)
-	{
-		while (n > 0)
-		{
-			rem = n % 10;
-			rev = rev * 10 + rem;
-			n /= 10;
-		}
-		while (rev > 0)
-		{
-			_putchar((rev % 10) + '0');
-			rev /= 10;
-		}
-	}
-	else
-		_putchar(n + '0');
+		print_number(n / 10);
+	else if (n == 0)
+		return;
+	_putchar(n % 10 + '0');
 }
