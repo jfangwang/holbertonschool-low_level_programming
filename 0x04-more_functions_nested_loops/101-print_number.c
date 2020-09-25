@@ -7,8 +7,8 @@
 void print_number(int n)
 {
 	int rev = 0;
-	int rem = 0;
-	int plc = 0;
+       	int rem = 0; 
+	int plc = 0; 
 	int overflow = 0;
 
 	if (n < 0)
@@ -33,7 +33,7 @@ void print_number(int n)
 			_putchar((overflow % 10) + '0');
 			overflow /= 10;
 		}
-		for (int a = 1; a < plc; a++)
+		for (int a = 1; a <= plc; a++)
 		{
 			_putchar((rev % 10) + '0');
 			rev /= 10;
