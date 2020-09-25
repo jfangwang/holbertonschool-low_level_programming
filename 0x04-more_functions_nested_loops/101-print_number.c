@@ -7,8 +7,8 @@
 void print_number(int n)
 {
 	int rev = 0;
-       	int rem = 0; 
-	int plc = 0; 
+	int rem = 0;
+	int plc = 0;
 	int overflow = 0;
 
 	if (n < 0)
