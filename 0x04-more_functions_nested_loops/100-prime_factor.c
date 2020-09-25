@@ -6,14 +6,12 @@
  */
 int main(void)
 {
-	long n = 612852475143;
+	long n = 300;
 	long a;
 
-	for (a = 2; a < sqrt(n); a++)
-	{
+	for (a = 2; a < n; a++)
 		while (n % a == 0)
 			n /= a;
-	}
 	printf("%ld\n", n);
 	return (0);
 }
