@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/**
+ * main - Generates a random valid password
+ * Return: 0
+ */
 int main(void){
   int max = 126;
   int current = 0;
