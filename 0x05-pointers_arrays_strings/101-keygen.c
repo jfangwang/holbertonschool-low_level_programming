@@ -1,28 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/**
- * main - Generates random valid passwords
- * Return: 0
- */
-int main(void)
-{
-	int maxChar = 126;
-	int minChar = 33;
-	int maxBit = 2772;
 
-	srand(time(NULL));
-	int randChar = rand() % maxChar;
+int main(void){
+  int max = 126;
+  int current = 0;
+  int randchar = 0;
 
-	while (maxBit > 0)
-	{
-		while ((randChar < minChar || maxBit - randChar < 33) && maxBit >= 127)
-			randChar = rand() % maxChar;
-		if (maxBit <= 126)
-			randChar = maxBit;
-		putchar(randChar);
-		maxBit -= randChar;
-		randChar = rand() % maxChar;
-	}
-	return (0);
+  srand (time(NULL));
+  while (current != 2772){
+    randchar = rand() % max;
+    while (randchar < 33)
+      randchar = rand() % max;
+    if (randchar + current >= 2739)
+      randchar = rand() % max;
+    if (max < 126 && max >= 33)
+      randchar = max;
+    current = current + randchar;
+    putchar(randchar);
+    if (current >= 2646)
+      max = 2772 - current;
+  }
+  return (0);
 }
