@@ -10,7 +10,10 @@ char *cap_string(char *s)
 
 	while (s[a])
 	{
-		b = a - 1;
+		if (a > 1)
+			b = a - 1;
+		else
+			b = a;
 		c = a + 1;
 		if ((s[c] >= 'a' && s[c] <= 'z') || (s[c + 1] == ' '))
 			if (s[b] == ' ' ||
