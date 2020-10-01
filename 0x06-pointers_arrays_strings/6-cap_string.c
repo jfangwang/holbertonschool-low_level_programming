@@ -6,7 +6,9 @@
  */
 char *cap_string(char *s)
 {
-	int a, b, c;
+	int a = 0;
+	int b = 0;
+	int c = 0;
 
 	while (s[a])
 	{
@@ -16,6 +18,7 @@ char *cap_string(char *s)
 			b = a;
 		c = a + 1;
 		if ((s[c] >= 'a' && s[c] <= 'z') || (s[c] == ' '))
+		{
 			if (s[b] == ' ' ||
 			    s[b] == '.' ||
 			    s[b] == '\n' ||
@@ -30,8 +33,11 @@ char *cap_string(char *s)
 			    s[b] == '{' ||
 			    s[b] == '}' ||
 			    s[a] == 0)
+			{
 				if (s[a] >= 'a' && s[a] <= 'z')
 					s[a] -= 32;
+			}
+		}		
 		a++;
 	}
 	return (s);
