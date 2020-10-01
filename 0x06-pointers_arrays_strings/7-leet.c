@@ -12,10 +12,9 @@ char *leet(char *s)
 
 	while (s[a] != '\0')
 	{
-		if ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
-			for (b = 0; b < 10; b++)
-				if (s[a] == leet[b])
-					s[a] = toleet[b / 2];
+		for (b = 0; b < 10; b++)
+			if (s[a] == leet[b])
+				s[a] = toleet[b / 2];
 		a++;
 	}
 	return (s);
