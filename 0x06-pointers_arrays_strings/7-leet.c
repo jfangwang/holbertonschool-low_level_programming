@@ -8,13 +8,13 @@ char *leet(char *s)
 {
 	int a, b;
 	char leet[10] = {'A', 'a', 'E', 'e', 'O', 'o', 'T', 't', 'L', 'l'};
-	char toleet[5] = {'4', '3', '0', '7', '1'};
+	char toleet[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	while (s[a] != '\0')
+	while (s[a])
 	{
 		for (b = 0; b < 10; b++)
 			if (s[a] == leet[b])
-				s[a] = toleet[b / 2];
+				s[a] = toleet[b];
 		a++;
 	}
 	return (s);
