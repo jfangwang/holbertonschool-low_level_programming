@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * _*strcat - concatenate two strings
- * @*dest: dest
- * @*src: src
- * return: dest
+ * _strcat - concatenate two strings
+ * @dest: dest
+ * @src: src
+ * Return: char
  */
 char *_strcat(char *dest, char *src)
 {
@@ -15,9 +15,8 @@ char *_strcat(char *dest, char *src)
 		b++;
 	while (dest[a] != '\0')
 		a++;
-	for (c = a; c <= a + b; c++){
+	for (c = a + 1; c <= a + b; c++)
 		dest[c] = src[c - a];
-	}
 	dest[c + 1] = '\0';
-	return dest;
+	return (dest);
 }
