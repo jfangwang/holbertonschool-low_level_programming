@@ -15,7 +15,7 @@ char *cap_string(char *s)
 		else
 			b = a;
 		c = a + 1;
-		if ((s[c] >= 'a' && s[c] <= 'z') || (s[c + 1] == ' '))
+		if ((s[c] >= 'a' && s[c] <= 'z') || (s[c] == ' '))
 			if (s[b] == ' ' ||
 			    s[b] == '.' ||
 			    s[b] == '\n' ||
