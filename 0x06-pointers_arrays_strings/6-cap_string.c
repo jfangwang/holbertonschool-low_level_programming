@@ -12,10 +12,7 @@ char *cap_string(char *s)
 
 	while (s[a])
 	{
-		if (a > 1)
-			b = a - 1;
-		else
-			b = a;
+		b = a - 1;
 		c = a + 1;
 		if ((s[c] >= 'a' && s[c] <= 'z') || (s[c] == ' '))
 		{
