@@ -9,7 +9,7 @@ char *cap_string(char *s)
 	int a, b, c;
 
 	while (s[a])
-	{		
+	{
 		b = a - 1;
 		c = a + 1;
 
