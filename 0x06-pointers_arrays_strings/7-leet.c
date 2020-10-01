@@ -14,7 +14,10 @@ char *leet(char *s)
 	{
 		for (b = 0; b < 10; b++)
 			if (s[a] == leet[b])
+			{
 				s[a] = toleet[b];
+				break;
+			}
 		a++;
 	}
 	return (s);
