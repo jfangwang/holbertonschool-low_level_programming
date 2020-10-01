@@ -4,21 +4,21 @@
  * @s: string
  * Return: s
  */
-char *leet(char *string)
+char *leet(char *s)
 {
 	int a, b;
 	char leet[10] = {'A', 'a', 'E', 'e', 'O', 'o', 'T', 't', 'L', 'l'};
 	char toleet[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	while (string[a] != '\0')
+	while (s[a] != '\0')
 	{
 		for (b = 0; b < 10; b++)
-			if (string[a] == leet[b])
+			if (s[a] == leet[b])
 			{
-				string[a] = toleet[b];
+				s[a] = toleet[b];
 				break;
 			}
 		a++;
 	}
-	return (string);
+	return (s);
 }
