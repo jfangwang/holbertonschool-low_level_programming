@@ -6,12 +6,13 @@
  */
 char *cap_string(char *s)
 {
-	int a = 0;
-	int b = a - 1;
-	int c = a + 1;
+	int a, b, c;
 
 	while (s[a])
-	{
+	{		
+		b = a - 1;
+		c = a + 1;
+
 		if (s[c] >= 'a' && s[c] <= 'z')
 			if (s[b] == ' ' || s[b] == '.' || s[b] == '\n' || s[b] == '\t')
 				if (s[a] >= 'a' && s[a] <= 'z')
