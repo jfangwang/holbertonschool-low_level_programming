@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- * string_toupper - prints a string in reverse     
+ * string_toupper - prints a string in reverse
+ * @s: s
  * Return: void
  */
 char *string_toupper(char *s)
@@ -13,5 +14,5 @@ char *string_toupper(char *s)
 			s[a] -= 32;
 		a++;
 	}
-	return(s);
+	return (s);
 }
