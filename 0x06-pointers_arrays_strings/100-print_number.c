@@ -13,9 +13,7 @@ void print_number(int n)
 	if (n == 0)
 		_putchar(0 + '0');
 	if (n < 0)
-	{
 		_putchar('-');
-	}
 	while (n < 0)
 	{
 		if (plc < 9)
