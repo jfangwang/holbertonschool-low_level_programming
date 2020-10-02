@@ -4,7 +4,7 @@
  * @n: input
  * Return: Integer
  */
-void print_num(int n)
+void print_number(int n)
 {
 	if (n < 0)
 	{
@@ -15,7 +15,7 @@ void print_num(int n)
 		}
 		else
 		{
-			print_num(n / 10);
+			print_number(n / 10);
 			_putchar(((n % 10) * -1) + '0');
 		}
 	}
@@ -25,10 +25,10 @@ void print_num(int n)
 			_putchar(n % 10 + '0');
 		else
 		{
-			print_num(n / 10);
+			print_number(n / 10);
 			_putchar(n % 10 + '0');
 		}
 	}
 	else
-		_putchar('0');	
+		_putchar('0');
 }
