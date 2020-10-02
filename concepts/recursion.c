@@ -7,6 +7,11 @@
  * 1) If you need to go to the base case and backtrack
  * 2) If you are dealing with nodes and trees
  *
+ * Every Recursion needs:
+ * 
+ * 1) A base case (so it can stop running)
+ * 2) A task to do over and over again (recursion)
+ *
  * "To understand recursion, you need to understand stacks"
  * 
  * Recursion is not scary, it is overrated
@@ -47,7 +52,7 @@ int printnum2(int n){
 		putchar('-'); //prints out negative sign 
 		n *= -1; //already printed out the - and turn it positive
 	}
-	if (n / 10 > 0) //if there is still a digit, run printnum2 recursively
+	if (n / 10 > 0) //Our base case: If there is still a digit, run printnum2 recursively
 		printnum2(n / 10); //recursion, calls itself
 	putchar(n % 10 + '0'); //THIS LINE AND BELOW DOES NOT EXECUTE UNTIL IT GETS A RETURN VALUE FROM THE LINE ABOVE
 }
