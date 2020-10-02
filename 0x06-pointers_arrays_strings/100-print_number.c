@@ -9,26 +9,20 @@ void print_number(int n)
 	int plc = 0;
 	int rev = 0;
 	int rev2 = 0;
+	int posneg = 1;
 
 	if (n == 0)
 		_putchar(0 + '0');
 	if (n < 0)
 		_putchar('-');
-	while (n < 0)
+	if (n < 0)
+		posneg = -1;
+	while (n != 0)
 	{
 		if (plc < 9)
-			rev = (rev * 10) + (-1 * (n % 10));
+			rev = (rev * 10) + (posneg * (n % 10));
 		else
-			rev2 = (rev2 * 10) + (-1 * (n % 10));
-		n /= 10;
-		plc++;
-	}
-	while (n > 0)
-	{
-		if (plc < 9)
-			rev = (rev * 10) + (n % 10);
-		else
-			rev2 = (rev2 * 10) + (n % 10);
+			rev2 = (rev2 * 10) + (posneg * (n % 10));
 		n /= 10;
 		plc++;
 	}
