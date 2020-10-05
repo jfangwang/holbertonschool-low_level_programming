@@ -12,7 +12,7 @@ void print_chessboard(char (*a)[8])
 	while (row < 8)
 	{
 		_putchar(a[row][col]);
-		if (col != 8)
+		if (col != 7)
 			col++;
 		else
 		{
