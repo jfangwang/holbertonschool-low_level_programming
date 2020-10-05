@@ -9,6 +9,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int a = 0;
 	int b = 0;
+
 	while (s[a] != '\0' || accept[a] != '\0')
 	{
 		if (s[a] == accept[a])
