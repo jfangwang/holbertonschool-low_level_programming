@@ -7,21 +7,25 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int a = 0;
-	int b = 0;
+	int sindex = 0;
+	int aindex = 0;
+	int closest = 0;
+	int len = 0;
 
-	while (s[a] != '\0' || accept[a] != '\0')
+	while (s[sindex] != '\0')
+		len++;
+	sindex = 0;
+	closest = len;
+	while (s[sindex] != '\0')
 	{
-		if (s[a] == accept[a])
+		while (accept[aindex] != '\0')
 		{
-			while (accept[b] != '\0')
-			{
-				return (s + a);
-			}
+			if (s[sindex] == accept[aindex])
+				if (closest > sindex)
+					closest = sindex;
+			aindex++;
 		}
-		a++;
+		sindex++;
 	}
-	if (b == 0)
-		return ('\0');
-	return (0);
+	return (s + sindex);
 }
