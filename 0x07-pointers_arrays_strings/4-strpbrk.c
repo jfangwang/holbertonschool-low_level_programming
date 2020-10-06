@@ -34,8 +34,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		aindex++;
 	}
-	if (closest == 0)
-		return (NULL);
-	else
-		return (s + closest);
+	return (s + closest);
 }
