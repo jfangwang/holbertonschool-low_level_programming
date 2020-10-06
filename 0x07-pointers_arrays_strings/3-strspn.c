@@ -10,21 +10,23 @@ unsigned int _strspn(char *s, char *accept)
 	int counter = 0;
 	int a = 0;
 	int b = 0;
+	int initialcount = 0;
 
-	while (accept[a] != '\0')
+	while (s[a] != '\0')
 	{
 		b = 0;
-		while (s[b] != '\0')
+		initialcount = counter;
+		while (accept[b] != '\0')
 		{
-			if (s[b] == accept[a])
+			if (s[a] == accept[b])
 			{
 				counter++;
 				break;
 			}
-			if (accept[a] == '\0')
-				return (counter);
 			b++;
 		}
+		if (initialcount == counter)
+			return (counter);
 		a++;
 	}
 	return (counter);
