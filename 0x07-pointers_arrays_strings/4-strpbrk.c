@@ -35,7 +35,7 @@ char *_strpbrk(char *s, char *accept)
 		aindex++;
 	}
 	if (closest == len)
-		return (s);
+		return (NULL);
 	else
 		return (s + closest);
 }
