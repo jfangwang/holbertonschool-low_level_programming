@@ -25,17 +25,10 @@ char *_strpbrk(char *s, char *accept)
 		sindex = 0;
 		while (s[sindex] != '\0')
 		{
-			if (s[sindex] == accept[aindex])
-			{
-				if (closest > sindex)
-					closest = sindex;
-			}
-			sindex++;
+			if (*(s + sindex) == *(accept + aindex))
+				return (s + i);
 		}
 		aindex++;
 	}
-	if (closest == 0)
-		return (0);
-	else
-		return (s + closest);
+	return (NULL);
 }
