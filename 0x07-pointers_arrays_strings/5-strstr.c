@@ -8,14 +8,13 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int hc = 0;
-	int nc = 0;
-	int initialhc = 0;
+	int hc, nc, initialhc;
 
 	while (haystack[hc] != '\0')
 	{
 		initialhc = hc;
-		while (needle[nc] == haystack[hc] && needle[nc] != '\0' && haystack[hc] != '\0')
+		while (needle[nc] == haystack[hc] &&
+			needle[nc] != '\0' && haystack[hc] != '\0')
 		{
 			nc++;
 			hc++;
