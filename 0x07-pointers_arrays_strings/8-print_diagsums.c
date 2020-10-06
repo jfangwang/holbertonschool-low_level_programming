@@ -11,15 +11,18 @@ void print_diagsums(int *a, int size)
 	int index = 0;
 	int leftd = 0;
 	int rightd = 0;
-	int total = (size * size) - 1;
+	int total = size * size;
 
 	while (index < total)
 	{
-		if (index % (size + 1) == 0)
-			leftd += a[index];
-		if (index % (size - 1) == 0)
-			rightd += a[index];
-		index++;
+		leftd += a[index];
+		index += size + 1;
+	}
+	index = size - 1;
+	while (index < (total - 1))
+	{
+		rightd += a[index];
+		index += size - 1;
 	}
 	printf("%d, %d\n", leftd, rightd);
 }
