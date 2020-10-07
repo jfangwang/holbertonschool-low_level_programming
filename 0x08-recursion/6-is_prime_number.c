@@ -16,7 +16,7 @@ int check(int a, int ogNum)
 	return (check(a - 1, ogNum));
 }
 /**
- * _sqrt_recursion - nat. sqr. root. of n
+ * is_prime_number - nat. sqr. root. of n
  * @n: int
  * Return: root of num
  */
