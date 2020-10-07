@@ -39,5 +39,8 @@ int is_palindrome(char *s)
 {
 	int b = 0;
 
-	return (check(b, length(s, 0), s));
+	if (length(s, 0) == -1)
+		return 1;
+	else
+		return (check(b, length(s, 0), s));
 }
