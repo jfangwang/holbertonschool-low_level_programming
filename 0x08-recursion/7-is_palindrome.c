@@ -15,7 +15,7 @@ int check(int start, int end, char *word)
 		if (end - start >= 3)
 			return (check(start + 1, end - 1, word));
 	}
-		return (0);
+	return (0);
 }
 
 /**
