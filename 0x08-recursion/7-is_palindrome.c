@@ -1,38 +1,45 @@
 #include "holberton.h"
 /**
- * check - nat. sqr. root. of n
- * @a: int
- * @ogNum: ogNum
- * Return: root of num
- */
-int check(int a, int ogNum)
+* check - nat. sqr. root. of n
+* @start: int
+* @end: int
+* @word: char
+* Return: 0 or 1
+*/
+int check(int start, int end, char *word)
 {
-	if (a < 1)
+	if (word[start] == word[end])
+	{
+		if (end - start == 1 || end - start == 2)
+			return (1);
+		if (end - start >= 3)
+			return (check(start + 1, end - 1, word));
+	}
 		return (0);
-	if (a < 2)
-		return (1);
-	if (ogNum % a == 0)
-		return (0);
-	return (check(a - 1, ogNum));
 }
 
 /**
- * length - gets length of string
- * @s: char
- * Return: length
- */
+* length - gets length of string
+* @s: char
+* Return: length
+*/
 int length(char *s)
 {
 	int count;
 
-	if (*s[count] != '\0');
+	while (s[count] != '\0'){
+		count++;
+	}
+	return (count - 1);
 }
 /**
- * is_palindrome - nat. sqr. root. of n
- * @n: int
- * Return: root of num
- */
-int is_palindrome(int n)
+* is_palindrome - nat. sqr. root. of n
+* @s: int
+* Return: root of num
+*/
+int is_palindrome(char *s)
 {
-	return (check(n - 1, n));
+	int b = 0;
+
+	return (check(b, length(s), s));
 }
