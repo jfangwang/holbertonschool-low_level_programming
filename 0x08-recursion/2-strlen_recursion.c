@@ -1,9 +1,10 @@
 #include "holberton.h"
-/** _strlen_recursion: prints a string
+/**
+ * _strlen_recursion - prints a string
  * @s: string
  * Return: string
  */
-void _strlen_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	int a = 0;
 
