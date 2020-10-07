@@ -9,8 +9,6 @@ int check(int a, int ogNum)
 {
 	if (a < 0)
 		return (-1);
-	if (a == ogNum / 2)
-		return (-1);
 	if (a * a == ogNum)
 		return (a);
 	else
