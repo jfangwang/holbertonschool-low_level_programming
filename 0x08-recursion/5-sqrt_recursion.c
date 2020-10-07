@@ -7,7 +7,7 @@
  */
 int check(int a, int ogNum)
 {
-	if (a < 0)
+	if (a < 1)
 		return (-1);
 	if (a * a == ogNum)
 		return (a);
