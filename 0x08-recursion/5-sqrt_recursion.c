@@ -9,14 +9,10 @@ int check(int a, int ogNum)
 {
 	if (a < 0)
 		return (-1);
-	if (a < 46340)
-	{
-		if (a * a == ogNum)
-			return (a);
-		else
-			return (check(a - 1, ogNum));
-	}
-	return (-1);
+	if (a * a == ogNum)
+		return (a);
+	else
+		return (check(a - 1, ogNum));
 }
 /**
  * _sqrt_recursion - nat. sqr. root. of n
