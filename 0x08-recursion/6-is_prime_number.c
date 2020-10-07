@@ -7,14 +7,11 @@
  */
 int check(int a, int ogNum)
 {
-	if (a < 0)
-		return (-1);
+	if (a < 2)
+		return (1);
 	if (ogNum % a == 0)
 		return (0);
-	else if (a > 1)
-		return (check(a - 1, ogNum));
-	else
-		return (1);
+	return (check(a - 1, ogNum));
 }
 /**
  * _sqrt_recursion - nat. sqr. root. of n
@@ -23,7 +20,5 @@ int check(int a, int ogNum)
  */
 int is_prime_number(int n)
 {
-	int ogNum = n;
-
-	return (check(n - 1, ogNum));
+	return (check(n - 1, n));
 }
