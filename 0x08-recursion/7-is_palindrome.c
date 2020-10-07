@@ -27,9 +27,8 @@ int length(char *s)
 {
 	int count;
 
-	while (s[count] != '\0'){
+	while (s[count] != '\0')
 		count++;
-	}
 	return (count - 1);
 }
 /**
