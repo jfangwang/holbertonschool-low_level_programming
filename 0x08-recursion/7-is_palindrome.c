@@ -23,13 +23,12 @@ int check(int start, int end, char *word)
 * @s: char
 * Return: length
 */
-int length(char *s)
+int length(char *s, int count)
 {
-	int count;
-
-	while (s[count] != '\0')
-		count++;
-	return (count - 1);
+	if (s[count] != '\0')
+		return (length(s, ++count));
+	else
+		return (count - 1);
 }
 /**
 * is_palindrome - nat. sqr. root. of n
@@ -40,5 +39,5 @@ int is_palindrome(char *s)
 {
 	int b = 0;
 
-	return (check(b, length(s), s));
+	return (check(b, length(s, 0), s));
 }
