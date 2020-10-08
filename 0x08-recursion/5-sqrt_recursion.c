@@ -12,7 +12,7 @@ int check(int a, int ogNum)
 	if (a * a == ogNum)
 		return (a);
 	else
-		return (check(a - 1, ogNum));
+		return (check(a + 1, ogNum));
 }
 /**
  * _sqrt_recursion - nat. sqr. root. of n
@@ -23,5 +23,5 @@ int _sqrt_recursion(int n)
 {
 	int ogNum = n;
 
-	return (check(n, ogNum));
+	return (check(1, ogNum));
 }
