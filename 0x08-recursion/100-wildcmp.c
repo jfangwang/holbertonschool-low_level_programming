@@ -43,7 +43,9 @@ int check_Wild2(char *s1, char *s2, int idx1, int idx2, int s1Len)
 			return (1);
 		/* If char after * does not match s1, start from end of */
 		/* s1 and go backwards from their until it finds a match. */
-		/* If no match is found going backwards, return 0 (Not Identical) */
+		/* If no match is found going backwards, return 0 (Not Identical). */
+		/* Had to create another helper function that does all this for me */
+		/* called backtrack */
 		else
 			return (backtrack(s1, s2, length(s1, 0) - 1, idx2 + 1));
 	}
@@ -52,7 +54,7 @@ int check_Wild2(char *s1, char *s2, int idx1, int idx2, int s1Len)
 /**
  * backtrack - The purpose of this function is to
  * backtrack to find a certain letter and provide
- * the indexes of matching letter
+ * the indexes when the matching letter is found
  * @s1: string 1
  * @s2: string 2 being tested against string 1
  * @s1end: int starting at last index of s1
