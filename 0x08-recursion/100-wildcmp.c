@@ -76,5 +76,8 @@ int backtrack(char *s1, char *s2, int s1end, int idx2)
  */
 int wildcmp(char *s1, char *s2)
 {
-	check_Wild2(s1, s2, 0, 0, length(s1, 0));
+	if (check_Wild2(s1, s2, 0, 0, length(s1, 0)) == 1)
+		return (1);
+	else
+		return (0);
 }
