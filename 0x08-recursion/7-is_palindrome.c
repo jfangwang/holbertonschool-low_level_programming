@@ -21,6 +21,7 @@ int check(int start, int end, char *word)
 /**
 * length - gets length of string
 * @s: char
+* @count: count
 * Return: length
 */
 int length(char *s, int count)
@@ -40,7 +41,7 @@ int is_palindrome(char *s)
 	int b = 0;
 
 	if (length(s, 0) == -1)
-		return 1;
+		return (1);
 	else
 		return (check(b, length(s, 0), s));
 }
