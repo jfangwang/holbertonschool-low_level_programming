@@ -1,14 +1,14 @@
 #include "holberton.h"
-#include <stdlib>
+#include <stdio.h>
 /**
- * free_grid - adds postive numbers
- * @g: pointer to grid
- * @h: # of rows of the grid
- * Return: the sum
+ * main - prints the num of args
+ * @a: argc
+ * @b: argv
+ * Return: num of args
  */
-void free_grid(int **g, int h)
+int main(int a, char *b[])
 {
-	for (h = h - 1; h >= 0; h--)
-		free(*(*g + h));
-	free(grid);
+	(void)b;
+	printf("%d\n", a - 1);
+	return (0);
 }
