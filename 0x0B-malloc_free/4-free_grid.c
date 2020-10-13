@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
+
+/**
+* free_grid -  a
+* @grid:a
+* @height:  a
+* Return: a
+*/
+
+void free_grid(int **grid, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+		free(grid[index]);
+	free(grid);
+}
+
