@@ -1,5 +1,5 @@
 # What is git-lazypush?
-Tired of typing git add, git commit, and git push? Git-lazypush does all that for you\n
+Tired of typing git add, git commit, and git push? Git-lazypush does all that for you
 
 * Git lazy is a bash script that automates git add, commit, and push with custom commit messages
 # How to install
