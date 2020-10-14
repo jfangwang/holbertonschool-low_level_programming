@@ -12,13 +12,13 @@ char *_strdup(char *str)
 	int length = 0;
 
 	if (str == NULL)
-		return (NULL);
+		return (0);
 	/*Get the length of Maxwell */
 	while (str[length] != '\0')
 		length++;
 	maxwell = malloc(sizeof(char) * (length + 1));
 	if (maxwell == NULL)
-		return (NULL);
+		return (0);
 	while (str[index] != '\0')
 	{
 		maxwell[index] = str[index];
