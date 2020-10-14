@@ -9,7 +9,7 @@ Tired of typing git add, git commit, and git push? Git-lazypush does all that fo
 	* It is also a sudo command since it is entering to your /bin dir so provide your admin password when it prompts you to
 1. You're all set!
 # Usage of git-lazypush
-* It is a command stored in bin so to use it, type `git lazypush [commit message]`
+* It is a command stored in bin so to use it, type `git lazypush yourCommitMessage`
 * Quotes are not necessary when typing your message :)
 * This command will not know if your head is untracked or not so use it when you know everything is stable
 
