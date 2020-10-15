@@ -24,6 +24,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		*(pat + a) = 0;
 		a++;
 	}
-	return (pat);
+	return ((void *)pat);
 }
 
