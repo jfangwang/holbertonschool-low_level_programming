@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
 * malloc_checked -  a
-* @int b:  a
+* @b:  a
 * Return: a
 */
 
