@@ -3,9 +3,9 @@
 #include "holberton.h"
 
 /**
-* calloc -  a
-* @int nmemb:  a
-* @int size:  a
+* _calloc -  a
+* @nmemb:  a
+* @size:  a
 * Return: a
 */
 
