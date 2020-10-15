@@ -17,14 +17,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int index = 0;
 	unsigned int index2 = 0;
 
-	while (s1[fredrick1] != '\0')
-		fredrick1++;
-	while (s2[fredrick2] != '\0')
-		fredrick2++;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	while (s1[fredrick1] != '\0')
+		fredrick1++;
+	while (s2[fredrick2] != '\0')
+		fredrick2++;
 	if ((int) n > fredrick2)
 		n = fredrick2;
 	concat = malloc(fredrick1 + n + 1);
