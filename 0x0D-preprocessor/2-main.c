@@ -1,5 +1,10 @@
-#include "stdio.h"
-#include "stdarg.h"
-#include "string.h"
-#include "stdlib.h"
-#include "holberton.h"
+#include <stdio.h>
+/**
+* main - a
+*Return: 0
+*/
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
+}
