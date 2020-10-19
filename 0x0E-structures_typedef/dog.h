@@ -3,7 +3,7 @@
 /**
 * struct dog -  a
 * @name:  a
-* @age: a 
+* @age: a
 * @owner: a
 * Return: a
 */
