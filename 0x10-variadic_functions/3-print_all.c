@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
 /**
@@ -11,12 +10,12 @@
 
 void print_all(const char * const format, ...)
 {
-	int willy = 0;
+	unsigned int willy = 0;
 	char *string;
 	va_list list;
 
 	va_start(list, format);
-	while (*(format + willy) != '\0')
+	while (*(format + willy) != '\0' && (format))
 	{
 		switch (*(format + willy))
 		{
@@ -27,17 +26,20 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
+				printf("%s", string);
+				break;
 			case 'i':
 				printf("%d", va_arg(list, int));
 				break;
 			case 'f':
 				/* Float is promoted to double */
-				printf("%lf", va_arg(list, double));
+				printf("%f", va_arg(list, double));
 				break;
 			case 'c':
 				/* Char is promoted to int */
-				printf("%c", va_arg(list, int));
-			default: 
+				printf("%c", (char) va_arg(list, int));
+				break;
+			default:
 				willy++;
 				continue;
 		}
