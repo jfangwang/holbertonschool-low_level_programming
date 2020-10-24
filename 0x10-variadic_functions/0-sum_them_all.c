@@ -14,15 +14,12 @@ int sum_them_all(const unsigned int n, ...)
 
 	if (n == 0)
 		return (0);
-	/* Init list */
 	va_start(args, n);
-	/* Iterate through the list */
+
 	for (willy = 0; willy < n; willy++)
 	{
-	/* Will add current arg to total and move to the next one */
 		total += va_arg(args, int);
 	}
-	/*End va_arg*/
 	va_end(args);
 	return (total);
 }

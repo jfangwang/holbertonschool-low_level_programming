@@ -7,7 +7,6 @@
 *@format: a variable
 *Return: 0
 **/
-
 void print_all(const char * const format, ...)
 {
 	unsigned int willy = 0;
