@@ -7,7 +7,6 @@
 *@format: a variable
 *Return: 0
 **/
-
 void print_all(const char * const format, ...)
 {
 	unsigned int willy = 0;
@@ -32,11 +31,9 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(list, int));
 				break;
 			case 'f':
-				/* Float is promoted to double */
 				printf("%f", va_arg(list, double));
 				break;
 			case 'c':
-				/* Char is promoted to int */
 				printf("%c", (char) va_arg(list, int));
 				break;
 			default:
