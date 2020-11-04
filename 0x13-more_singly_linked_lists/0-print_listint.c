@@ -9,10 +9,8 @@
  *@h: a variable
  *Return: 0
  **/
-
 size_t print_listint(const listint_t *h)
 {
-	/* Willy likes to count */
 	size_t willy = 0;
 
 	if (h == NULL)
