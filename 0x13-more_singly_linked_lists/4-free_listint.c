@@ -1,8 +1,8 @@
-#include "stdio.h"
-#include "stdarg.h"
-#include "string.h"
-#include "stdlib.h"
-#include "holberton.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
+#include <stdlib.h>
+#include "lists.h"
 /**
 *free_listint - Write a function that frees a listint_t list.
 *@head: a variable
@@ -11,5 +11,15 @@
 
 void free_listint(listint_t *head)
 {
+	listint_t *willy = head;
 
+	if (head == NULL)
+		return;
+
+	while (head != NULL)
+	{
+		willy = head;
+		head = head->next;
+		free(willy);
+	}
 }
