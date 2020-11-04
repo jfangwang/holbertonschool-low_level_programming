@@ -20,6 +20,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	willy = malloc(sizeof(listint_t));
 
+	if (!willy)
+		return (NULL);
 	willy->n = n;
 	willy->next = *willysHead;
 	*willysHead = willy;
