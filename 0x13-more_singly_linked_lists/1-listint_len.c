@@ -4,10 +4,11 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
-*listint_len - Write a function that returns the number of elements in a linked listint_t list.
-*@h: a variable
-*Return: 0
-**/
+ *listint_len - Write a function that returns the
+ *number of elements in a linked listint_t list.
+ *@h: a variable
+ *Return: 0
+ **/
 
 size_t listint_len(const listint_t *h)
 {

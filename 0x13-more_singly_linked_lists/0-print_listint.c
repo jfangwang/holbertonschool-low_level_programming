@@ -4,10 +4,11 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
-*print_listint - Write a function that prints all the elements of a listint_t list.
-*@h: a variable
-*Return: 0
-**/
+ *print_listint - Write a function that prints
+ *all the elements of a listint_t list.
+ *@h: a variable
+ *Return: 0
+ **/
 
 size_t print_listint(const listint_t *h)
 {
