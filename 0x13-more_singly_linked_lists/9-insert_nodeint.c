@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- **insert_nodeint_at_index - Write a function that returns 
+ **insert_nodeint_at_index - Write a function that returns
  *the nth node of a listint_t linked list.
  *@head: a variable
  *@idx: a variable
@@ -33,8 +33,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		/*the linked list could be < idx*/
 		if (cur == NULL)
 			return (NULL);
-		else
-			cur = cur->next;
+		cur = cur->next;
 	}
 	willy->next = cur->next;
 	cur->next = willy;
