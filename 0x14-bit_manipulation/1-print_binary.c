@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
-*print_binary - Write a function that prints the binary representation of a number.
+*print_binary - Write a function that
+*prints the binary representation of a number.
 *@n: a variable
 *Return: 0
 **/
