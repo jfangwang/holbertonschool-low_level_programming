@@ -18,7 +18,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	while (n > 0)
 	{
 		count++;
-		/*printf("n: %lu\n", n & 1);*/
 		n = n >> 1;
 	}
 	if (index > count)
