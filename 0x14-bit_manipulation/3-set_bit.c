@@ -8,18 +8,8 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int count = 0;
-	unsigned long *temp = n;
-	unsigned long *bin = 0;
-
-	while (*n > 0)
-	{
-		count++;
-		*n = *n >> 1;
-	}
-	if (index > count)
+	if (index > 63)
 		return (-1);
-	*bin = *n;
-	n = temp;
-	return (n | bin);
+	*n = *n | 1 << index;
+	return (1);
 }
