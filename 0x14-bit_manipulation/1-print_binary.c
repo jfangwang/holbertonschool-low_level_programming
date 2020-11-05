@@ -11,30 +11,6 @@
 
 void print_binary(unsigned long int n)
 {
-	/*
-	int i = 0;
-	int bit = 1;
-	int sum = 1;
-	int bnum = 1;
-
-	if (!n)
-		return (0);
-	if (n == 1)
-		return (1);
-	while (bnum < n)
-	{
-		if (bnum * 2 > n)
-			break;
-		bnum *= 2;
-		bit++;
-	}
-	while (bit > 0)
-	{
-		
-	}
-
-	return (sum);
-	*/
 	if (n == 1)
 	{
 		_putchar(1 + '0');
