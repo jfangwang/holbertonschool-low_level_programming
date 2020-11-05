@@ -4,11 +4,11 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
-*binary_to_uint - Write a function that converts 
-*a binary number to an unsigned int.
-*b: a variable
-*Return: 0
-**/
+ *binary_to_uint - Write a function that converts
+ *a binary number to an unsigned int.
+ *@b: a variable
+ *Return: 0
+ **/
 
 unsigned int binary_to_uint(const char *b)
 {
@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 	int sum = 0;
 
 	if (!b)
-		return(0);
+		return (0);
 	while (b[i] != '\0')
 		i++;
 	i--;
@@ -30,6 +30,6 @@ unsigned int binary_to_uint(const char *b)
 		bit *= 2;
 		i--;
 	}
-	
-	return(sum);
+
+	return (sum);
 }
