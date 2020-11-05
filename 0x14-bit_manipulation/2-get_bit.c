@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
-*get_bit - Write a function that returns the value of a bit at a given index.
+*get_bit - Write a function that returns
+*the value of a bit at a given index.
 *@n: a variable
 *@index: a variable
 *Return: 0
