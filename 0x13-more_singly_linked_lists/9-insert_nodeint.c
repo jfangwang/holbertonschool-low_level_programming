@@ -26,6 +26,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* Willy stores the requested node */
 	willy->n = n;
 	willy->next = NULL;
+	if (idx == 0)
+	{
+		cur->next = *head;
+		*head = willy;
+		return (head);
+	}
 	/* iterate through the list */
 	cur = *head;
 	for (count = 0; count <= idx - 1; count++)
