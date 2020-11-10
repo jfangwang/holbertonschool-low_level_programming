@@ -1,4 +1,4 @@
-#incldue "holberton.h"
+#include "holberton.h"
 
 /**
 *_strlen - finds len
@@ -24,6 +24,8 @@ size_t _strlen(char *s)
 int create_file(const char *filename, char *text_content)
 {
 	if (!filename)
+		return (-1);
+	if (!text_content)
 		return (-1);
 	return (1);
 }
