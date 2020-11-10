@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 *read_textfile - a
-*@filename: var
+*@filename: variable
 *@letters: var
 *Return: 0
 */
