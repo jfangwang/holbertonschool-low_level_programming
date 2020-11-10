@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-*read_textfile - asdf
+*read_textfile - a
 *@filename: var
 *@letters: var
 *Return: 0
