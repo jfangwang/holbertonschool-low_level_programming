@@ -1,7 +1,3 @@
-#include "stdio.h"
-#include "stdarg.h"
-#include "string.h"
-#include "stdlib.h"
 #include "holberton.h"
 /**
 *dlistint_len - Write a function that returns the number of elements in a linked dlistint_t list.

@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-#include <stdlib.h>
 #include "holberton.h"
 /**
  *print_dlistint - Write a function that prints all
