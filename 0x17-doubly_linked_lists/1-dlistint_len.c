@@ -2,7 +2,7 @@
 /**
  *dlistint_len - Write a function that returns the number of elements
  *in a linked dlistint_t list.
- *@dlistint_t *h: a variable
+ *@h: a variable
  *Return: 0
  **/
 
