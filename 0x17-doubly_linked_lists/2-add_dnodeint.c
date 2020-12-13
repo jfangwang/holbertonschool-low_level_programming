@@ -10,7 +10,6 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new, *big_head;
-	int willy = 0;
 
 	if (head == NULL)
 		return (NULL);
