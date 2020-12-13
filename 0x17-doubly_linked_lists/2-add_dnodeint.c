@@ -2,8 +2,8 @@
 /**
  **add_dnodeint - Write a function that adds a new node at the beginning of a d
  *listint_t list.
- *@*head: a variable
- *@int n: a variable
+ *@head: a variable
+ *@n: a variable
  *Return: 0
  **/
 
