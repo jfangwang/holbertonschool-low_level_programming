@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-#include <stdlib.h>
-#include "holberton.h"
+#include "lists.h"
 /**
  **add_dnodeint - Write a function that adds a new node at the beginning of a dlistint_t list.
  *@*head: a variable
