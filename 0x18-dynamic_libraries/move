@@ -1,0 +1,25 @@
+#!/bin/bash
+name=(putchar
+islower
+isalpha
+abs
+isupper
+isdigit
+strlen
+puts
+strcpy
+atoi
+strcat
+strncat
+strncpy
+strcmp
+memset
+memcpy
+strchr
+strspn
+strpbrk
+strstr
+)
+for t in ${name[@]}; do
+	cp $(find .. *$t*.c | head -1)
+done
