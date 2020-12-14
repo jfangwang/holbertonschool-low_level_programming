@@ -20,11 +20,13 @@ strspn
 strpbrk
 strstr
 )
+i=1
 for t in ${name[@]}; do
 	cp $(find .. -name *$t*.c | head -1) .
 	if command;then
-		echo OK
+		echo OK $i
 	else
-		echo DID NOT FIND: $(find .. -name *$t*.c | head -1)
+		echo DID NOT FIND NUMBER $i: $(find .. -name *$t*.c | head -1)
 	fi
+	i=$((i+1))
 done
