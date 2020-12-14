@@ -22,4 +22,9 @@ strstr
 )
 for t in ${name[@]}; do
 	cp $(find .. -name *$t*.c | head -1) .
+	if command;then
+		echo OK
+	else
+		echo DID NOT FIND: $(find .. -name *$t*.c | head -1)
+	fi
 done
