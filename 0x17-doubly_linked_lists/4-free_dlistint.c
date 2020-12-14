@@ -1,8 +1,4 @@
-#include "stdio.h"
-#include "stdarg.h"
-#include "string.h"
-#include "stdlib.h"
-#include "holberton.h"
+#include "lists.h"
 /**
 *free_dlistint - Write a function that frees a dlistint_t list.
 *@head: a variable
@@ -11,5 +7,15 @@
 
 void free_dlistint(dlistint_t *head)
 {
+	dlistint_t *willy = head;
 
+        if (head == NULL)
+                return;
+        while (head != NULL)
+        {
+                willy = head;
+                head = head->next;
+                free(willy);
+        }
+        free(head);
 }
