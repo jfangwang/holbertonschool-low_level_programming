@@ -26,10 +26,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	cur = *h;
 	if (idx == 0)
 	{
-		cur->next = *h;
+		willy->next = *h;
 		*h = willy;
-		cur->prev = NULL;
-		return (*h);
+		willy->prev = NULL;
+		cur->prev = willy;
+		return (willy);
 	}
 	/* iterate through the list */
 	cur = *h;
