@@ -1,20 +1,20 @@
-_putchar(c);
-_islower(int c);
-_isalpha(int c);
-_abs(int n);
-_isupper(int c);
-_isdigit(int c);
-_strlen(*s);
-void _puts(*s);
-*_strcpy(char *dest, char *src);
-_atoi(*s);
-*_strcat(char *dest, char *src);
-*_strncat(char *dest, char *src, n);
-*_strncpy(char *dest, char *src, n);
-_strcmp(*s1, char *s2);
-*_memset(char *s, char b, unsigned n);
-*_memcpy(char *dest, char *src, unsigned n);
-*_strchr(char *s, char c);
-unsigned _strspn(*s, char *accept);
-*_strpbrk(char *s, char *accept);
-*_strstr(char *haystack, char *needle);
+putchar
+islower
+isalpha
+abs
+isupper
+isdigit
+strlen
+puts
+strcpy
+atoi
+strcat
+strncat
+strncpy
+strcmp
+memset
+memcpy
+strchr
+strspn
+strpbrk
+strstr
