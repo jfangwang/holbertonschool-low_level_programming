@@ -15,6 +15,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (*head == NULL)
 		return (-1);
 	cur = *head;
+	while (len < index)
+	{
+		if (cur == NULL)
+			return (-1);
+		cur = cur->next;
+		len++;
+	}
+	behind = cur->prev;
 	if (index == 0)
 	{
 		if (cur->next != NULL)
@@ -30,24 +38,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (1);
 		}
 	}
-	while (len < index)
-	{
-		if (cur == NULL)
-			return (-1);
-		cur = cur->next;
-		len++;
-	}
-	behind = cur->prev;
-	if (cur->next == NULL)
-	{
-		behind->next = NULL;
-		cur->next->prev = behind;
-	}
 	else
-	{
 		behind->next = cur->next;
+	if (cur->next != NULL)
 		cur->next->prev = behind;
-	}
 	free(cur);
 	return (1);
 }
