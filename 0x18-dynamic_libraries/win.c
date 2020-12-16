@@ -6,7 +6,6 @@ int c = 200;
 int rand()
 {
 	count += 1;
-	printf("Count) %d\n", count);
 	if (count == 1)
 		return (8);
 	else if (count == 2)
