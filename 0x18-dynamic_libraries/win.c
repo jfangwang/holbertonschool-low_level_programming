@@ -4,5 +4,6 @@ int count = 0;
 int rand()
 {
 	printf("Count: %d\n", count);
-	return (9);
+	count += 1;
+	return (count);
 }
