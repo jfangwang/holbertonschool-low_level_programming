@@ -34,7 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	/* iterate through the list */
 	cur = *h;
-	for (count = 0; count < idx - 1; count++)
+	for (count = 0; count != idx; count++)
 	{
 		/*the linked list could be < idx*/
 		if (cur == NULL)
