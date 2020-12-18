@@ -4,6 +4,7 @@
 *@prev: prev node
 *@next: next node
 *@a: value
+*Return: node
 */
 dlistint_t *create(dlistint_t *prev, dlistint_t *next, unsigned int a)
 {
@@ -11,7 +12,7 @@ dlistint_t *create(dlistint_t *prev, dlistint_t *next, unsigned int a)
 
 	node = malloc(sizeof(dlistint_t));
 	if (node == NULL)
-		return NULL;
+		return (NULL);
 	node->next = next;
 	node->prev = prev;
 	node->n = a;
