@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	 * Replace Value if key exists already
 	*/
 	find = ht->array[index];
-	while(find != NULL)
+	while (find != NULL)
 	{
 		if (!strcmp(find->key, key))
 		{
