@@ -24,9 +24,9 @@ void hash_table_delete(hash_table_t *ht)
 			{
 				free(find->key);
 				free(find->value);
-				temp = find->next;
-				free(find);
-				find = temp;
+				temp = find;
+				find = find->next;
+				free(temp);
 			}
 		}
 	}
