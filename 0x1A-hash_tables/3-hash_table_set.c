@@ -26,8 +26,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = new;
-		if (ht->array[index] == NULL)
-			return (0);
 		return (1);
 	}
 	/**
