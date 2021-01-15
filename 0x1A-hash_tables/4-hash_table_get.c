@@ -16,8 +16,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *find;
 
 	index = key_index((unsigned char *)key, ht->size);
-	if (ht == NULL || key == NULL || strlen(key) == 0 || key == "")
+	if (ht == NULL || key == NULL || strlen(key) == 0)
 		return (0);
+	if (ht->array[index] == NULL)
+		return (NULL);
 	for (find = ht->array[index]; find != NULL; find = find->next)
 	{
 		if (strcmp(find->key, key) == 0)
