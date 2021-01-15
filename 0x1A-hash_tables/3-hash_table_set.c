@@ -49,7 +49,7 @@ hash_node_t *add_node(const char *key, const char *value)
 {
 	hash_node_t *new;
 
-	new = malloc(sizeof(hash_table_t *));
+	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
 	new->key = strdup(key);
