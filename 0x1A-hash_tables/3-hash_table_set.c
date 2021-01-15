@@ -16,7 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *find, *new;
 
-	if (ht->size == 0 || ht == NULL || !(*key))
+	if (key == NULL || ht == NULL || value == NULL || !(*key))
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
 	/**
@@ -35,39 +35,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		find = find->next;
 	}
-	new = add_node(key, value);
-	if (new == NULL && new->value == NULL)
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
 		return (0);
-	if (find == NULL)
+	new->key = strdup(key);
+	new->value = strdup(value);
+	if (new->value == NULL && value != NULL)
+		return (0);
+	new->next = NULL;
+	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = new;
 	}
 	else
 	{
-		new->next = ht->array[index];
-		ht->array[index] = new;
+		new->next = (ht->array)[index];
+		(ht->array)[index] = new;
 	}
 	return (1);
-}
-/**
- *add_node - Write a function that adds an element to the hash table.
- *@key: a variable
- *@value: a variable
- *Return: 0
-**/
-hash_node_t *add_node(const char *key, const char *value)
-{
-	hash_node_t *new;
-
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-		return (0);
-	new->key = strdup(key);
-	if (new->key == NULL)
-		return (0);
-	new->value = strdup(value);
-	if (new->value == NULL && value == NULL)
-		return (0);
-	new->next = NULL;
-	return (new);
 }
