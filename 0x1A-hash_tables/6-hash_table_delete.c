@@ -20,9 +20,9 @@ void hash_table_delete(hash_table_t *ht)
 	{
 		for (find = ht->array[index]; find != NULL; find = find->next)
 		{
-			temp = find->next;
 			free(find->key);
 			free(find->value);
+			temp = find->next;
 			free(find);
 			find = temp;
 		}
