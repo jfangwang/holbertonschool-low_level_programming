@@ -18,13 +18,16 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 	for (index = 0; index < ht->size; index++)
 	{
-		for (find = ht->array[index]; find != NULL; find = find->next)
+		if (ht->array[index])
 		{
-			free(find->key);
-			free(find->value);
-			temp = find;
-			find = find->next;
-			free(temp);
+			for (find = ht->array[index]; find != NULL; find = find->next)
+			{
+				temp = find;
+				find = find->next;
+				free(temp);
+				free(find->key);
+				free(find->value);
+			}
 		}
 	}
 	free(ht->array);
