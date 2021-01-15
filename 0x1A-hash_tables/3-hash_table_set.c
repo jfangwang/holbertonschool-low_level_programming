@@ -20,11 +20,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	    value == NULL || strlen(key) == 0 || !(*key) || !(*value))
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
-	{
-		ht->array[index] = add_node(key, value);
-		return (1);
-	}
 	/**
 	 * Replace Value if key exists already
 	*/
@@ -36,8 +31,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			find->value = strdup(value);
 			if (find->value == NULL)
 				return (0);
+			return (1);
 		}
-		return (1);
 	}
 	new = add_node(key, value);
 	if (new == NULL)
