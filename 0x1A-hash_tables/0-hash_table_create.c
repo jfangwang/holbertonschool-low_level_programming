@@ -5,7 +5,7 @@
 #include "hash_tables.h"
 /**
 * hash_table_create - Write a function that creates a hash table.
-*size: a variable
+*@size: a variable
 *Return: 0
 **/
 
