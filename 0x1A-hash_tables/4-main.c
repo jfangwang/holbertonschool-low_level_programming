@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "hash_tables.h"
+
 /**
  * main - check the code for Holberton School students.
  *
@@ -21,8 +22,8 @@ int main(void)
 	hash_table_set(ht, "Betty", "Holberton");
 	hash_table_set(ht, "98", "Battery Street");
 	hash_table_set(ht, "c", "isfun");
-	hash_table_set(ht, "synaphea", "join together");
-	hash_table_set(ht, "joyful", "happy");
+	hash_table_set(ht, "c", "isMoreFun");
+
 	value = hash_table_get(ht, "python");
 	printf("%s:%s\n", "python", value);
 	value = hash_table_get(ht, "Bob");
@@ -39,9 +40,5 @@ int main(void)
 	printf("%s:%s\n", "c", value);
 	value = hash_table_get(ht, "javascript");
 	printf("%s:%s\n", "javascript", value);
-	value = hash_table_get(ht, "joyful");
-	printf("%s:%s\n", "synaphea", value);
-	value = hash_table_get(ht, "synaphea");
-	printf("%s:%s\n", "joyful", value);
 	return (EXIT_SUCCESS);
 }
