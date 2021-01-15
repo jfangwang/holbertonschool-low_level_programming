@@ -17,8 +17,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *find, *new;
 
 	index = key_index((unsigned char *)key, ht->size);
-	if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
+	if (ht->size == 0 || ht == NULL || ht->array == NULL || key == NULL ||
+	    value == NULL || strlen(key) == 0)
 		return (0);
+	/**
+	 * Replace Value if key exists already
+	*/
 	for (find = ht->array[index]; find != NULL; find = find->next)
 	{
 		if (strcmp(find->key, key) == 0)
