@@ -12,24 +12,26 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int index = 0;
-	hash_node_t *temp;
+	hash_node_t *temp, *find;
 
 	if (ht == NULL)
 		return;
+	find = ht->array[index];
 	for (index = 0; index < ht->size; index++)
 	{
-		if (ht->array[index])
+		if (find)
 		{
-			while (ht->array[index] != NULL)
+			while (find != NULL)
 			{
 				temp = ht->array[index];
-				ht->array[index] = ht->array[index]->next;
+				find = find->next;
 				free(temp->key);
 				free(temp->value);
 				free(temp);
 			}
 		}
 	}
+	free(find);
 	free(ht->array);
 	free(ht);
 }
