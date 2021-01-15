@@ -20,13 +20,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	    value == NULL || strlen(key) == 0 || !(*key) || !(*value))
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
-	find = ht->array[index];
-	new = find;
-	if (find == NULL)
+	new = add_node(key, value);
+	if (ht->array[index] == NULL)
 	{
-		ht->array[index] = add_node(key, value);
-		if (find == NULL)
-			return (0);
+		ht->array[index] = new;
 		return (1);
 	}
 	/**
@@ -41,9 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-	ht->array[index] = add_node(key, value);
-	if (ht->array[index] == NULL)
-		return (0);
+	new->next = find;
 	ht->array[index]->next = new;
 	return (1);
 }
@@ -61,11 +56,7 @@ hash_node_t *add_node(const char *key, const char *value)
 	if (new == NULL)
 		return (0);
 	new->key = strdup(key);
-	if (new->key == NULL)
-		return (0);
 	new->value = strdup(value);
-	if (new->value == NULL)
-		return (0);
 	new->next = NULL;
 	return (new);
 }
