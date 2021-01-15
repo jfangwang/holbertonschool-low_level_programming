@@ -4,10 +4,10 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 /**
-*hash_table_delete - Write a function that deletes a hash table.
-*@ht: a variable
-*Return: 0
-**/
+ *hash_table_delete - Write a function that deletes a hash table.
+ *@ht: a variable
+ *Return: 0
+ **/
 
 void hash_table_delete(hash_table_t *ht)
 {

@@ -4,16 +4,16 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 /**
-**hash_table_get - Write a function that retrieves a value associated with a key.
-*@ht: a variable
-*@key: a variable
-*Return: 0
-**/
+ **hash_table_get - Retrieves a value associated with a key.
+ *@ht: a variable
+ *@key: a variable
+ *Return: 0
+ **/
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
-	hash_node_t * find;
+	hash_node_t *find;
 
 	index = key_index((unsigned char *)key, ht->size);
 	if (ht == NULL || key == NULL || strlen(key) == 0)

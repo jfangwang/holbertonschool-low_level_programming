@@ -4,15 +4,15 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 /**
-*hash_table_print - Write a function that prints a hash table.
-*@ht: a variable
-*Return: 0
-**/
+ *hash_table_print - Write a function that prints a hash table.
+ *@ht: a variable
+ *Return: 0
+ **/
 
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int index, count;
-	hash_node_t * find;
+	hash_node_t *find;
 
 	if (ht == NULL)
 		return;

@@ -5,8 +5,8 @@
 #include "hash_tables.h"
 /**
 *key_index - Write a function that gives you the index of a key.
-*@unsigned char *key: a variable
-*@long int size: a variable
+*@key: a variable
+*@size: a variable
 *Return: 0
 **/
 

@@ -4,22 +4,18 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 /**
-*hash_table_set - Write a function that adds an element to the hash table.
-*@ht: a variable
-*@key: a variable
-*@value: a variable
-*Return: 0
-**/
+ *hash_table_set - Write a function that adds an element to the hash table.
+ *@ht: a variable
+ *@key: a variable
+ *@value: a variable
+ *Return: 0
+ **/
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *new, *find;
+	hash_node_t *new;
 
-	for (find = ht->aray[index]; find != NULL; find = find->next)
-	{
-		if 
-	}
 	index = key_index((unsigned char *)key, ht->size);
 	if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
 		return (0);
