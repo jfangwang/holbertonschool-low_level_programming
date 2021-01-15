@@ -14,7 +14,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *find, *new;
+	hash_node_t *find, *new, *og;
 
 	if (ht->size == 0 || ht == NULL || ht->array == NULL || key == NULL ||
 	    value == NULL || strlen(key) == 0 || !(*key) || !(*value))
@@ -33,6 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/**
 	 * Replace Value if key exists already
 	*/
+	og = ht->array[index];
 	for (find = ht->array[index]; find != NULL; find = find->next)
 	{
 		if (strcmp(find->key, key) == 0)
@@ -42,8 +43,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-	new->next = find;
-	ht->array[index]->next = new;
+	ht->array[index] = new;
+	if (ht->array[index] == NULL)
+		return (0);
+	(ht->array[index])->next = og;
 	return (1);
 }
 /**
