@@ -20,7 +20,7 @@ void hash_table_delete(hash_table_t *ht)
 	{
 		if (ht->array[index])
 		{
-			for (find = ht->array[index]; find != NULL; find = find->next)
+			while (find != NULL)
 			{
 				temp = find;
 				find = find->next;
