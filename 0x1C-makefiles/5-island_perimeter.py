@@ -47,8 +47,7 @@ def island_perimeter(grid):
         while row < len(grid) - 1:
             b = row
             if grid[row][col] == 1 and (b == 0 or b == len(grid)):
-                perim += 1
-                add_2 = False
+                perim += 2
             elif grid[row][col] == 1:
                 while grid[b][col] == 1 and b < len(grid) - 1:
                     b += 1
