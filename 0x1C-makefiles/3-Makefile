@@ -8,7 +8,7 @@ all: ${OBJ}
 clean:
 	${RM} -f  *~ ${NAME}
 oclean:
-	${RM} ${OBJ} -f ${OBJ}
+	${RM} -f ${OBJ}
 fclean:
 	clean oclean
 re:
