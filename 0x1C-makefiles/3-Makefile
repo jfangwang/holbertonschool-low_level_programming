@@ -1,0 +1,21 @@
+CC =  gcc
+SRC = main.c holberton.c
+OBJ = ${SRC:.c=.o}
+NAME = holberton
+RM = rm
+all: ${SRC} ${OBJ}
+	${CC} ${SRC} -o ${NAME}
+	${CC} ${OBJ} -o ${NAME}
+
+clean:
+	${RM} -f  *~/. ${NAME}
+
+oclean: ${OBJ}
+	${RM} ${OBJ} -f ${OBJ}
+fclean:
+	${RM} ${OBJ} -f ${OBJ}
+	${RM} -f  *~/.
+re:
+	${RM} ${OBJ} -f ${OBJ}
+	${CC} ${SRC} -o ${NAME}
+	${CC} ${OBJ} -o ${NAME}
