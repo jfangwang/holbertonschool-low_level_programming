@@ -44,7 +44,6 @@ def island_perimeter(grid):
                 perim += 1
         print()
     col = 0
-    perim = 0
     add_2 = True
     rcount = 0
     scout = 0
@@ -53,13 +52,13 @@ def island_perimeter(grid):
         row = 0
         add_2 = True
         searching = False
-        while row < len(grid):
+        while row < len(grid) - 1:
             scout = row
-            print(grid[row][col], end=' ')
             if grid[scout][col] == 1:
                 searching = True
                 while(grid[scout][col] == 1 and scout < len(grid) - 1):
                     scout += 1
+                    print("a", end="")
                 searching = False
                 if add_2 == True:
                     perim += 2
@@ -70,11 +69,11 @@ def island_perimeter(grid):
                 row = scout
             else:
                 row += 1
-            print(perim, end=' ')
+            print("a", end="")
         if searching:
             if add_2:
                 perim += 2
             else:
                 perim += 1
         print()
-        return perim
+    return perim
