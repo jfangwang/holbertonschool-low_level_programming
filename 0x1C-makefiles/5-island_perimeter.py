@@ -21,22 +21,14 @@ def island_perimeter(grid):
             right = None
             left = None
             if grid[row][col] == 1:
-                if row < 0:
+                if row - 1 < 0:
                     perim += 1
-                else:
-                    up = grid[row - 1][col]
                 if row >= len(grid) - 1:
                     perim += 1
-                else:
-                    down = grid[row + 1][col]
-                if col < 0:
+                if col - 1< 0:
                     perim += 1
-                else:
-                    left = grid[row][col - 1]
                 if col >= len(grid[row]) - 1:
                     perim += 1
-                else:
-                    right = grid[row][col + 1]
                 if row >= 0 and up == 0:
                     perim += 1
                     # up = 9
@@ -53,8 +45,9 @@ def island_perimeter(grid):
                     perim += 1
                     # right
                     grid[row][col + 1] = 9
-    # for row in range(0, len(grid)):
-        # for col in range(0, len(grid[row])):
-            # print(grid[row][col], end=' ')
-        # print()
+        # print(perim)
+#    for row in range(0, len(grid)):
+#        for col in range(0, len(grid[row])):
+#             print(grid[row][col], end=' ')
+#        print()
     return perim
