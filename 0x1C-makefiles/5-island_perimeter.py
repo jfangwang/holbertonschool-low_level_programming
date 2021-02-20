@@ -46,5 +46,4 @@ def island_perimeter(grid):
                 if col < len(grid[row]) and right == 0:
                     perim += 1
                     right = 9
-        print()
     return perim
