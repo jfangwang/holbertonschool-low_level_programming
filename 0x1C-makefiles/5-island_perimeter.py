@@ -29,7 +29,7 @@ def island_perimeter(grid):
                     perim += 1
                 else:
                     left = grid[row][col - 1]
-                if col + 1>= len(grid[row]):
+                if col + 1 >= len(grid[row]):
                     perim += 1
                 else:
                     right = grid[row][col + 1]
