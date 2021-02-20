@@ -14,7 +14,7 @@ def island_perimeter(grid):
     perim = 0
     for row in range(0, len(grid)):
         for col in range(0, len(grid[row])):
-            #print(grid[row][col], end=' ')
+            # print(grid[row][col], end=' ')
             """outside row border"""
             if grid[row][col] == 1:
                 if row - 1 < 0:
@@ -26,7 +26,7 @@ def island_perimeter(grid):
                 if col - 1 < 0:
                     """Left"""
                     perim += 1
-                if col  + 1 > len(grid[row]) - 1:
+                if col + 1 > len(grid[row]) - 1:
                     """Right"""
                     perim += 1
 
@@ -46,7 +46,7 @@ def island_perimeter(grid):
                     perim += 1
                     # right
                     # grid[row][col + 1] = 9
-        #print("Perim: {}".format(perim))
+        # print("Perim: {}".format(perim))
 #    for row in range(0, len(grid)):
 #        for col in range(0, len(grid[row])):
 #             print(grid[row][col], end=' ')
