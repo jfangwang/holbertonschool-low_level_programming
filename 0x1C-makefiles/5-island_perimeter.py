@@ -77,3 +77,4 @@ def island_perimeter(grid):
             else:
                 perim += 1
         print()
+        return perim
