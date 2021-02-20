@@ -14,38 +14,39 @@ def island_perimeter(grid):
     perim = 0
     for row in range(0, len(grid)):
         for col in range(0, len(grid[row])):
-            # print(grid[row][col], end=' ')
+           #  print(grid[row][col], end=' ')
             """outside row border"""
-            up = None
-            down = None
-            right = None
-            left = None
             if grid[row][col] == 1:
                 if row - 1 < 0:
+                    """Up"""
                     perim += 1
-                if row >= len(grid) - 1:
+                if row + 1 > len(grid) - 1:
+                    """Down"""
                     perim += 1
-                if col - 1< 0:
+                if col - 1 < 0:
+                    """Left"""
                     perim += 1
-                if col >= len(grid[row]) - 1:
+                if col  + 1 > len(grid[row]) - 1:
+                    """Right"""
                     perim += 1
-                if row >= 0 and up == 0:
+
+                if row >= 0 and grid[row - 1][col] == 0:
                     perim += 1
                     # up = 9
-                    grid[row - 1][col] = 9
-                if row < len(grid) and down == 0:
+                    # grid[row - 1][col] = 9
+                if row < len(grid) and grid[row + 1][col] == 0:
                     perim += 1
                     # down = 9
-                    grid[row + 1][col] = 9
-                if col >= 0 and left == 0:
+                    # grid[row + 1][col] = 9
+                if col >= 0 and grid[row][col - 1] == 0:
                     perim += 1
                     # left
-                    grid[row][col - 1] = 9
-                if col < len(grid) and right == 0:
+                    # grid[row][col - 1] = 9
+                if col < len(grid) and grid[row][col + 1] == 0:
                     perim += 1
                     # right
-                    grid[row][col + 1] = 9
-        # print(perim)
+                    # grid[row][col + 1] = 9
+        # print("Perim: {}".format(perim))
 #    for row in range(0, len(grid)):
 #        for col in range(0, len(grid[row])):
 #             print(grid[row][col], end=' ')
