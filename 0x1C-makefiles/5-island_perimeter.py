@@ -15,52 +15,65 @@ def island_perimeter(grid):
     perim = 0
     add_2 = True
     rcount = 0
-    """horizontal"""
-    for row in grid:
+    scout = 0
+    searching = False
+    for row in range(0, len(grid)):
         col = 0
         add_2 = True
-        while col < len(row):
-            b = col
-            if row[b] == 1 and (b == 0 or b == len(row) - 1):
-                """edge cases"""
-                perim += 2
-            elif row[b] == 1:
-                while row[b] == 1 and b < len(row):
-                    b += 1
-                    print(str(grid[rcount][b - 1]) + " perim " + str(perim), end = " ")
-                if add_2:
+        searching = False
+        while col < len(grid[row]):
+            scout = col
+            if grid[row][scout] == 1:
+                searching = True
+                while(grid[row][scout] == 1 and scout < len(grid[row]) - 1):
+                    scout += 1
+                searching = False
+                if add_2 == True:
                     perim += 2
                     add_2 = False
                 else:
                     perim += 1
-            if b > col:
-                col = b
+            if scout > col:
+                col = scout
             else:
                 col += 1
-            print(str(grid[rcount][col - 1]) + " perim " + str(perim), end = " ")
+        if searching:
+            if add_2:
+                perim += 2
+            else:
+                perim += 1
         print()
-        rcount += 1
-    row = 0
-    for col in range(0, len(grid[row])):
+    col = 0
+    perim = 0
+    add_2 = True
+    rcount = 0
+    scout = 0
+    searching = False
+    for col in range(0, len(grid[0])):
         row = 0
         add_2 = True
-        while row < len(grid) - 1:
-            b = row
-            if grid[row][col] == 1 and (b == 0 or b == len(grid)):
-                perim += 2
-            elif grid[row][col] == 1:
-                while grid[b][col] == 1 and b < len(grid) - 1:
-                    b += 1
-                    # print(str(grid[b - 1][col]) + " perim " + str(perim), end = " ")
-                if add_2 and b != len(grid) - 1:
+        searching = False
+        while row < len(grid):
+            scout = row
+            print(grid[row][col], end=' ')
+            if grid[scout][col] == 1:
+                searching = True
+                while(grid[scout][col] == 1 and scout < len(grid) - 1):
+                    scout += 1
+                searching = False
+                if add_2 == True:
                     perim += 2
                     add_2 = False
                 else:
                     perim += 1
-            if b > row:
-                row = b
+            if scout > row:
+                row = scout
             else:
                 row += 1
-            # print(str(grid[row - 1][col]) + " perim " + str(perim), end = " ")
+            print(perim, end=' ')
+        if searching:
+            if add_2:
+                perim += 2
+            else:
+                perim += 1
         print()
-    return perim
